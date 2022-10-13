@@ -5,10 +5,12 @@
  */
 
 // @lc code=start
-public class Solution {
-    public int[] TwoSum(int[] nums, int target) {
+public class Solution
+{
+    public int[] TwoSum(int[] nums, int target)
+    {
         var len = nums.Length;
-        
+
         // Solution 1: O(n2), O(1)
         /*
         for (var i = 0; i < len - 1; i++) {
@@ -21,22 +23,25 @@ public class Solution {
         
         return null;
         */
-        
+
         // Solution 2: O(n), O(n)
         var hash = new Dictionary<int, int>();
         var num = 0;
-        for (var i = 0; i < len; i++) {
+        for (var i = 0; i < len; i++)
+        {
             num = nums[i];
             var complement = target - num;
-            if (hash.ContainsKey(complement)) {
-                return new int[] { hash[complement], i};
+            if (hash.ContainsKey(complement))
+            {
+                return new int[] { hash[complement], i };
             }
-            
-            if (!hash.ContainsKey(num)) {
-                hash.Add(nums[i], i);    
+
+            if (!hash.ContainsKey(num))
+            {
+                hash.Add(nums[i], i);
             }
         }
-        
+
         return null;
     }
 }
