@@ -14,23 +14,23 @@ class MyQueue:
         self.s1.append(x)
 
     def pop(self) -> int:
-        if self.empty():
-            return -1
+        if self.s2:
+            return self.s2.pop()
         
-        while self.s1:
-            self.s2.append(self.s1.pop())
-        x = self.s2.pop()
-        while self.s2:
-            self.s1.append(self.s2.pop())
-        return x
-
+        if self.s1:
+            while self.s1:
+                self.s2.append(self.s1.pop())
+            return self.s2.pop()
+            
     def peek(self) -> int:
-        if self.empty():
-            return -1
-        return self.s1[0]
+        if self.s2:
+            return self.s2[-1]
+        
+        if self.s1:
+            return self.s1[0]
         
     def empty(self) -> bool:
-        return not self.s1
+        return not self.s1 and not self.s2
 
 
 # Your MyQueue object will be instantiated and called as such:
