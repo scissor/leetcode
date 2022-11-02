@@ -10,18 +10,16 @@
 
 class Solution:
     def firstBadVersion(self, n: int) -> int:
-        right = n
-        left = 0
         index = 0
+        left = 0
+        right = n
         
         while left < right - 1:
-            index = int((right - left) * 0.5)
+            index = left + int((right - left) * 0.5)
             if isBadVersion(index):
                 right = index
             else:
                 left = index
-                
-            print(index, left, right)
                 
         return right
 # @lc code=end
