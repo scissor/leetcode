@@ -40,7 +40,7 @@ class Solution:
     def majorityElement_2(self, nums: List[int]) -> int:
         return sorted(nums)[(int)(len(nums)/2)]
     
-    # Self solution but slow (10.89%)
+    # # Brute solution but slow (10.89%)
     def majorityElement_1(self, nums: List[int]) -> int:
         import math
         

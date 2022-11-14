@@ -61,7 +61,7 @@ class Solution:
         return sum
 
 
-    # Self solution with hash
+    # # Brute solution with hash
     def romanToInt_1(self, s: str) -> int:
         marks = {
             "I": ['V', 'X'], 

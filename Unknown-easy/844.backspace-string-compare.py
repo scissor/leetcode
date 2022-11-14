@@ -34,7 +34,7 @@ class Solution:
         return transfer(s) == transfer(t)
 
 
-    # Self solution, use counter
+    # # Brute solution, use counter
     def backspaceCompare(self, s: str, t: str) -> bool:
         def transfer(s):
             s1 = ''

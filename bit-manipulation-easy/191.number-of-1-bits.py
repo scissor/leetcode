@@ -24,7 +24,7 @@ class Solution:
             n >>= 1
         return count
 
-    # Self solution
+    # Brute solution
     def hammingWeight_1(self, n: int) -> int:
         count = 0
         while n:

@@ -34,7 +34,7 @@ class Solution:
             bits.extend([b + 1 for b in bits])
         return bits[:n+1]
     
-    # Self solution by list concat
+    # # Brute solution by list concat
     def countBits(self, n: int) -> List[int]:
         subset = [1]
         bits = [0, 1]
