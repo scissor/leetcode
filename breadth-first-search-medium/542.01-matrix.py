@@ -6,7 +6,14 @@
 
 # @lc code=start
 class Solution:
-    # BFS：不用 visit，初始化未走過的為 -1
+    # Offset 技法
+    # DIR = [0, 1, 0, -1, 0]
+    # for i in range(4):
+    #    nx, ny = x + DIR[i], y + DIR[i + 1]
+    # => (0,1), (1,0), (0,-1), (-1,0)
+    
+    # BFS：不用 visit，初始化未走過的為 -1，Code較簡潔
+    # 但需要先判斷邊界，所以可能會較使用 set 還慢
     def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
         m, n = len(mat), len(mat[0])
         explore = []
