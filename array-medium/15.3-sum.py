@@ -11,6 +11,7 @@ class Solution:
         result = set()
         nums.sort()
         
+        x = nums[0]
         for i in range(len(nums)-2):
             # Avoid [0,0,0]
             if i > 0 and nums[i] == nums[i-1]:

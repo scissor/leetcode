@@ -6,6 +6,7 @@
 
 # @lc code=start
 class Solution:
+    # 排序後，for 搭配雙指標掃，目標先減去首數提升效率
     def threeSumClosest(self, nums: List[int], target: int) -> int:
         nums.sort()
         ans = nums[0] + nums[1] + nums[2]
